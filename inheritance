@@ -1,0 +1,31 @@
+class A{
+    int x,y;
+    void getdata(int a,int b){
+        x=a;
+        y=b;
+    }
+}
+class B extends A{
+    int s=0;
+    void add(){
+        s=x+y;
+        System.out.println("Sum="+s);
+    }
+}
+class C extends A{
+    int m=0;
+    void mul(){
+        m=x*y;
+        System.out.println("Product="+m);
+    }
+}
+public class Sum{
+    public static void main(String args[]) {
+        B b1=new B();
+        C c1=new C();
+        b1.getdata(10,20);
+        c1.getdata(20,30);
+        b1.add();
+        c1.mul();
+    }
+}
